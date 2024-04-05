@@ -26,9 +26,9 @@ const Content = ({ user, loading }) => {
         <section
           className={`h-auto   flex  flex-col  0 w-full ${
             toggleTheme
-              ? "bg-[#1f2a48] "
+              ? "bg-[#1f2a48] text-white "
               : " bg-white shadow shadow-[#24232393] text-black"
-          } rounded-xl p-5 text-white`}
+          } rounded-xl p-5 `}
         >
           <section className="flex max-sm:flex-col ">
             <img
@@ -41,19 +41,17 @@ const Content = ({ user, loading }) => {
                 <h1 className="font-bold text-xl">
                   {user?.login || "The Octocat"}
                 </h1>
-                <span className="text-sm text-[#d2d5d9] ">
-                  Joined {formattedJoinedDate}
-                </span>
+                <span className="text-sm ">Joined {formattedJoinedDate}</span>
               </section>
               <span className="text-[#0663cc]"> @{user?.name || "concat"}</span>
-              <p className="mt-5 text-sm  text-[#a6a9b6]">
+              <p className="mt-5 text-sm  ">
                 {user?.bio || " This profile has no bio "}
               </p>
             </section>
           </section>
           <section className="flex flex-col ml-28  max-sm:mx-0">
             <section
-              className={`w-full h-[80px] flex  justify-between px-5 py-3 text-[12px] mt-6 rounded-xl text-white  ${
+              className={`w-full h-[80px] flex  justify-between px-5 py-3 text-[12px] mt-6 rounded-xl  ${
                 toggleTheme
                   ? "bg-[#141c2f] text-white"
                   : "bg-[#f5f8ff] text-black"
