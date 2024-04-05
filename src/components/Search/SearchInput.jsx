@@ -69,7 +69,7 @@ const SearchInput = () => {
                 toggleTheme
                   ? " bg-[#1f2a48] text-[#bfc3a5] "
                   : "bg-white shadow shadow-[#24232393] text-black "
-              }  border-none rounded-xl   focus:outline-none  mt-8 `}
+              }  border-none rounded-xl   focus:outline-none    mt-8 `}
               placeholder="Search Github username..."
               {...register("search")}
             />

@@ -49,7 +49,7 @@ const Content = ({ user, loading }) => {
               </p>
             </section>
           </section>
-          <section className="flex flex-col ml-28  max-lg:mx-0 w-full">
+          <section className="flex flex-col ml-28  max-lg:mx-0 ">
             <section
               className={`w-full h-[80px] flex  justify-between px-5 py-3 text-[12px] mt-6 rounded-xl  ${
                 toggleTheme
@@ -79,12 +79,12 @@ const Content = ({ user, loading }) => {
               </section>
             </section>
             <section
-              className={`flex text-[12px] gap-10 mt-7 w-full flex-wrap max-sm:gap-3  ${
+              className={`flex  max-sm:flex-col text-[12px] gap-10 mt-7 w-full  max-sm:gap-3  ${
                 toggleTheme ? "text-white" : "text-black"
               }`}
             >
-              <section className="w-full flex flex-wrap   ">
-                <section className="flex  fitems-center gap-3">
+              <section className="w-full  max-sm:flex max-sm:flex-col  ">
+                <section className="flex  items-center gap-3">
                   <img
                     src={
                       toggleTheme
@@ -117,7 +117,7 @@ const Content = ({ user, loading }) => {
                   </span>
                 </section>
               </section>
-              <section className="w-full">
+              <section className="w-full  max-sm:flex max-sm:flex-col  ">
                 <section className="flex items-center gap-3">
                   <img
                     src={
