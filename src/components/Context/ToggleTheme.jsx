@@ -6,7 +6,7 @@ export const useTheme = () => {
   return useContext(ThemeContext);
 };
 export const ToggleThemeProvider = ({ children }) => {
-  const [toggleTheme, setToggleTheme] = useState(false);
+  const [toggleTheme, setToggleTheme] = useState(true);
 
   const handleToggleTheme = () => {
     setToggleTheme(prev => !prev);
