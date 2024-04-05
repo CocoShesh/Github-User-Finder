@@ -24,19 +24,19 @@ const Content = ({ user, loading }) => {
         </section>
       ) : (
         <section
-          className={`h-auto   flex  flex-col  0 w-full ${
+          className={`h-auto   flex  flex-col  w-full ${
             toggleTheme
               ? "bg-[#1f2a48] text-white "
               : " bg-white shadow shadow-[#24232393] text-black"
-          } rounded-xl p-5 `}
+          } rounded-xl p-5 max-sm:p-3 `}
         >
-          <section className="flex max-sm:flex-col ">
+          <section className="flex max-lg:flex-col ">
             <img
               src={user?.avatar_url || "/default.png"}
               alt=""
-              className="h-[100px] mt-5 rounded-full  max-sm:w-[100px] max-sm:h-[100px] max-sm:mx-auto"
+              className="h-[100px] mt-5 rounded-full  max-lg:w-[100px] max-lg:h-[100px] max-lg:mx-auto"
             />
-            <section className="w-full vh-full  p-5 max-sm:px-0">
+            <section className="w-full vh-full  p-5 max-lg:px-0">
               <section className="flex items-center justify-between">
                 <h1 className="font-bold text-xl">
                   {user?.login || "The Octocat"}
@@ -49,7 +49,7 @@ const Content = ({ user, loading }) => {
               </p>
             </section>
           </section>
-          <section className="flex flex-col ml-28  max-sm:mx-0">
+          <section className="flex flex-col ml-28  max-lg:mx-0 w-full">
             <section
               className={`w-full h-[80px] flex  justify-between px-5 py-3 text-[12px] mt-6 rounded-xl  ${
                 toggleTheme
@@ -79,12 +79,12 @@ const Content = ({ user, loading }) => {
               </section>
             </section>
             <section
-              className={`flex text-[12px] gap-10 mt-7  ${
+              className={`flex text-[12px] gap-10 mt-7 w-full flex-wrap max-sm:gap-3  ${
                 toggleTheme ? "text-white" : "text-black"
               }`}
             >
-              <section className="w-full    ">
-                <section className="flex items-center gap-3">
+              <section className="w-full flex flex-wrap   ">
+                <section className="flex  fitems-center gap-3">
                   <img
                     src={
                       toggleTheme
@@ -94,9 +94,9 @@ const Content = ({ user, loading }) => {
                     alt=""
                   />
 
-                  <span>
+                  <span className=" ">
                     {user?.location || (
-                      <span className="text-[#848a9c]"> Not available</span>
+                      <span className="text-[#848a9c] "> Not available</span>
                     )}
                   </span>
                 </section>
