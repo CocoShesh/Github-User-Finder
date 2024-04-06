@@ -30,7 +30,7 @@ const Content = ({ user, loading }) => {
               : " bg-white shadow shadow-[#24232393] text-black"
           } rounded-xl p-5 max-sm:p-3 `}
         >
-          <section className="flex gap-10 ">
+          <section className="flex gap-5 ">
             <img
               src={user?.avatar_url || "/default.png"}
               alt=""
