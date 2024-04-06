@@ -28,7 +28,7 @@ const Content = ({ user, loading }) => {
             toggleTheme
               ? "bg-[#1f2a48] text-white "
               : " bg-white shadow shadow-[#24232393] text-black"
-          } rounded-xl p-5 max-sm:p-3 `}
+          } rounded-xl p-5 max-sm:p-3 max-sm:pb-5 `}
         >
           <section className="flex gap-5 ">
             <img
