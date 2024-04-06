@@ -2,6 +2,9 @@
 
 ## Sample Images
 ![Sample Image 1](https://github.com/CocoShesh/Github-User-Finder/assets/110368170/3b946476-4830-4301-b0b7-1e4404e933db)
+
+
+
 ![Sample Image 2](https://github.com/CocoShesh/Github-User-Finder/assets/110368170/2eef54a9-23e0-454f-bc42-4d0926d251cc)
 
 ## Description
