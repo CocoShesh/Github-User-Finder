@@ -4,6 +4,7 @@
 
 body {
   font-family: "Space Mono", monospace;
+  background: #141c2f;
 }
 .custom-loader {
   width: 50px;
