@@ -5,7 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { IoSearchOutline } from "react-icons/io5";
 import Content from "../Content/Content";
 import { UserInput } from "../../Api/UserInput";
-import { useTheme } from "../Context/ToggleTheme";
+import { useTheme } from "../../Context/ToggleTheme";
 const SearchInput = () => {
   const [inputValues, setInputValues] = useState("");
   const [user, setUser] = useState([]);

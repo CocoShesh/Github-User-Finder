@@ -1,5 +1,5 @@
 import React from "react";
-import { useTheme } from "../Context/ToggleTheme";
+import { useTheme } from "../../Context/ToggleTheme";
 const Content = ({ user, loading }) => {
   const { toggleTheme } = useTheme();
   const formattedJoinedDate = user?.created_at ? (
@@ -30,20 +30,24 @@ const Content = ({ user, loading }) => {
               : " bg-white shadow shadow-[#24232393] text-black"
           } rounded-xl p-5 max-sm:p-3 `}
         >
-          <section className="flex max-lg:flex-col ">
+          <section className="flex gap-10 ">
             <img
               src={user?.avatar_url || "/default.png"}
               alt=""
               className="h-[100px] mt-5 rounded-full  max-lg:w-[100px] max-lg:h-[100px] max-lg:mx-auto"
             />
             <section className="w-full vh-full  p-5 max-lg:px-0">
-              <section className="flex items-center justify-between">
+              <section className="flex max-md:flex-col items-center max-md:items-start justify-between">
                 <h1 className="font-bold text-xl">
                   {user?.login || "The Octocat"}
+                  <span className="text-[#0663cc]">
+                    {" "}
+                    <br /> @{user?.name || "concat"}
+                  </span>{" "}
                 </h1>
                 <span className="text-sm ">Joined {formattedJoinedDate}</span>
               </section>
-              <span className="text-[#0663cc]"> @{user?.name || "concat"}</span>
+
               <p className="mt-5 text-sm  ">
                 {user?.bio || " This profile has no bio "}
               </p>
@@ -79,7 +83,7 @@ const Content = ({ user, loading }) => {
               </section>
             </section>
             <section
-              className={`flex  max-sm:flex-col text-[12px] gap-10 mt-7 w-full  max-sm:gap-3  ${
+              className={`flex  max-sm:flex-col text-[12px] gap-10 mt-7 w-full  max-sm:gap-3 max-sm:ml-4  ${
                 toggleTheme ? "text-white" : "text-black"
               }`}
             >
