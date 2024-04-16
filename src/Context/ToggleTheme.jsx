@@ -6,16 +6,10 @@ export const useTheme = () => {
   return useContext(ThemeContext);
 };
 export const ToggleThemeProvider = ({ children }) => {
-  const [toggleTheme, setToggleTheme] = useState(true);
-
-  const handleBodyBackground = () => {
-    const body = document.querySelector("body");
-    body.style.backgroundColor = toggleTheme ? "#f0f0f0" : "#141c2f";
-  };
+  const [toggleTheme, setToggleTheme] = useState(false);
 
   const handleToggleTheme = () => {
-    setToggleTheme(prev => !prev);
-    handleBodyBackground();
+    setToggleTheme(document.documentElement.classList.toggle("dark"));
   };
   return (
     <ThemeContext.Provider value={{ handleToggleTheme, toggleTheme }}>
