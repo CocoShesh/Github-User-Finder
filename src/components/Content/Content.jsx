@@ -15,29 +15,19 @@ const Content = ({ user, loading }) => {
   return (
     <>
       {loading ? (
-        <section
-          className={`h-[300px] flex  items-center justify-center  w-full ${
-            toggleTheme ? " bg-[#1f2a48]" : "bg-[#646464]"
-          }  rounded-xl p-5 text-white`}
-        >
+        <section className="h-[300px] flex  items-center justify-center  w-full   bg-[#1f2a48] dark:bg-[#646464] rounded-xl p-5 dark:text-white ">
           <div class="custom-loader"></div>
         </section>
       ) : (
         <a href={user?.html_url} target="_blank" rel="noreferrer">
-          <section
-            className={`h-auto   flex  flex-col  w-full ${
-              toggleTheme
-                ? "bg-[#1f2a48] text-white "
-                : " bg-white shadow shadow-[#24232393] text-black"
-            } rounded-xl p-5 max-sm:p-3 max-sm:pb-5 `}
-          >
+          <section className="h-auto   flex  flex-col  w-full   bg-[#1f2a48] text-white    dark:bg-white shadow shadow-[#24232393] dark:text-black  rounded-xl p-5 max-sm:p-3 max-sm:pb-5 ">
             <section className="flex gap-5 ">
               <img
                 src={user?.avatar_url || "/default.png"}
                 alt=""
                 className="h-[100px] mt-5 rounded-full w max-lg:w-[100px] max-lg:h-[100px] max-lg:mx-auto"
               />
-              <section className="w-full vh-full  p-5 max-lg:px-0">
+              <section className="w-full vh-full  py-5 max-lg:px-0">
                 <section className="flex max-md:flex-col items-center max-md:items-start justify-between">
                   <h1 className="font-bold text-xl">
                     {user?.login || "The Octocat"}
@@ -55,13 +45,7 @@ const Content = ({ user, loading }) => {
               </section>
             </section>
             <section className="flex flex-col ml-28  max-lg:mx-0 ">
-              <section
-                className={`w-full h-[80px] flex  justify-between px-5 py-3 text-[12px] mt-6 rounded-xl  ${
-                  toggleTheme
-                    ? "bg-[#141c2f] text-white"
-                    : "bg-[#f5f8ff] text-black"
-                }`}
-              >
+              <section className="w-full h-[80px] flex  justify-between px-5 py-3 text-[12px] mt-6 rounded-xl    bg-[#141c2f] text-white   dark:bg-[#f5f8ff] dark:text-black ">
                 <section>
                   <span className="text-[#9fa3a9]">Repos</span> <br />
                   <span className="text-xl font-bold">
@@ -83,18 +67,14 @@ const Content = ({ user, loading }) => {
                   </span>
                 </section>
               </section>
-              <section
-                className={`flex  max-sm:flex-col text-[12px] gap-10 mt-7 w-full  max-sm:gap-3 max-sm:ml-4  ${
-                  toggleTheme ? "text-white" : "text-black"
-                }`}
-              >
+              <section className="flex  max-sm:flex-col text-[12px] gap-10 mt-7 w-full  max-sm:gap-3 max-sm:ml-4    dark:text-white text-black">
                 <section className="w-full  max-sm:flex max-sm:flex-col  ">
                   <section className="flex  items-center gap-3">
                     <img
                       src={
                         toggleTheme
-                          ? "/icon-location.svg"
-                          : "/icon-location-dark.svg"
+                          ? "/icon-location-dark.svg"
+                          : "/icon-location.svg"
                       }
                       alt=""
                     />
@@ -109,8 +89,8 @@ const Content = ({ user, loading }) => {
                     <img
                       src={
                         toggleTheme
-                          ? "/icon-website.svg"
-                          : "/icon-website-dark.svg"
+                          ? "/icon-website-dark.svg"
+                          : "/icon-website.svg"
                       }
                       alt=""
                       className="h-5"
@@ -127,8 +107,8 @@ const Content = ({ user, loading }) => {
                     <img
                       src={
                         toggleTheme
-                          ? "/icon-twitter.svg"
-                          : "icon-twitter-dark.svg"
+                          ? "icon-twitter-dark.svg"
+                          : "/icon-twitter.svg"
                       }
                       alt=""
                       className="h-5"
@@ -143,8 +123,8 @@ const Content = ({ user, loading }) => {
                     <img
                       src={
                         toggleTheme
-                          ? "/icon-company.svg"
-                          : "/icon-company-dark.svg"
+                          ? "/icon-company-dark.svg"
+                          : "/icon-company.svg"
                       }
                       alt=""
                       className="h-5"

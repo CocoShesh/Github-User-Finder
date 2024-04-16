@@ -39,9 +39,7 @@ const SearchInput = () => {
 
   return (
     <>
-      <section
-        className={`h-32 ${toggleTheme ? "text-white" : " text-black"}  `}
-      >
+      <section className="h-32 text-white dark:text-black">
         <section className=" flex justify-between ">
           <h1 className=" font-bold text-xl "> devfinder</h1>
           <section
@@ -50,13 +48,13 @@ const SearchInput = () => {
           >
             {toggleTheme ? (
               <React.Fragment>
-                <span className=" uppercase  text-[12px]">Light </span>
-                <img src="/icon-sun.svg" alt="" />
+                <span className=" uppercase  text-sm">Dark </span>
+                <img src="/icon-moon.svg" alt="" />
               </React.Fragment>
             ) : (
               <React.Fragment>
-                <span className=" uppercase  text-sm">Dark </span>
-                <img src="/icon-moon.svg" alt="" />
+                <span className=" uppercase  text-[12px]">Light </span>
+                <img src="/icon-sun.svg" alt="" />
               </React.Fragment>
             )}
           </section>
@@ -65,11 +63,7 @@ const SearchInput = () => {
           <section className=" relative">
             <input
               type="text"
-              className={`w-full h-14 px-14  ${
-                toggleTheme
-                  ? " bg-[#1f2a48] text-[#bfc3a5] "
-                  : "bg-white shadow shadow-[#24232393] text-black "
-              }  border-none rounded-xl   focus:outline-none  max-sm:placeholder:text-[12px]   mt-8 `}
+              className="w-full h-14 px-14   bg-[#1f2a48] text-[#bfc3a5]  dark:bg-white shadow shadow-[#24232393] dark:text-black   border-none rounded-xl   focus:outline-none  max-sm:placeholder:text-[12px]   mt-8 "
               placeholder="Search Github username..."
               {...register("search")}
             />
