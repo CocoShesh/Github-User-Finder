@@ -67,7 +67,7 @@ const Content = ({ user, loading }) => {
                   </span>
                 </section>
               </section>
-              <section className="flex  max-sm:flex-col text-[12px] gap-10 mt-7 w-full  max-sm:gap-3 max-sm:ml-4    dark:text-white text-black">
+              <section className="flex  max-sm:flex-col text-[12px] gap-10 mt-7 w-full  max-sm:gap-3 max-sm:ml-4    dark:text-black ">
                 <section className="w-full  max-sm:flex max-sm:flex-col  ">
                   <section className="flex  items-center gap-3">
                     <img
